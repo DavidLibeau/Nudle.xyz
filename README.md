@@ -1,6 +1,6 @@
 # Nudle.xyz
 
->Recreation of the Nudle website, the Google parody of Watch Dogs
+>Recreation of the Nudle website, the Google parody of the game Watch Dogs 2 by Ubisoft.
 
 ## Community
 
