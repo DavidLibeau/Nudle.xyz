@@ -79,6 +79,7 @@
             <?php } ?>
             <button type="submit" class="mdl-js-ripple-effect"><i class="material-icons">search</i></button>
         </div>
+		<p style="text-align:center;margin:20px 0 0 0;width:100%;opacity:0.5;">New! Discover <a href="maps">Nudle maps</a>.</p>
     </form>
     <?php if(isset($_GET["q"])){ ?>
     <div id="results">

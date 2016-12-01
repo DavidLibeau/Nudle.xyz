@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="icon" type="image/png" href="/img/favicon.png"/>
+    <title>Nudle maps</title>
+	<meta name="description" content="Search all the web with nudle."/>
+	<meta name="keywords" content="watch dogs, watchdogs, nudle, ubisoft, hacking, search, google, game"/>
+    <meta name="theme-color" content="#D4D4D4"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Nudle.xyz">
+	<meta name="twitter:title" content="Nudle">
+	<meta name="twitter:description" content="Nudle search engine">
+	<meta name="twitter:creator" content="">
+	<meta name="twitter:image" content="http://nudle.xyz/img/nudle_preview.jpg">
+	<meta property="og:title" content="Nudle">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="http://nudle.xyz">
+	<meta property="og:image" content="http://nudle.xyz/img/nudle_preview.jpg">
+	<meta property="og:description" content="Nudle search engine">
+	<meta property="og:site_name" content="Nudle">
+	
+	<style>
+		*{margin:0;padding:0;}
+		
+		.leaflet-container{
+			background:#228cb0!important;
+		}
+	</style>
+	<link rel="stylesheet" href="leaflet.css" />
+	<script src="leaflet.js"></script>
+	
+</head>
+<body>
+<div id="map" style="width: 100vw; height: 100vh;"></div>
+<script>
+
+	var map = L.map('map',
+                    {   attributionControl: false,
+                        zoomControl: true,
+                        center: [51.500, -0.1100],
+                        zoom: 14.5,
+                        maxZoom: 17,
+                        minZoom:14,
+                        maxBounds: [[51.488, -0.142], [51.535, -0.078]],
+                        closePopupOnClick: false,
+						boxZoom: false
+                    });
+	
+	var imageUrl = 'sanfrancisco-map.jpg',
+    //imageBounds = [[51.490, -0.142], [51.510, -0.078]]; //745px / 375px
+	//maxBounds: [[51.488, -0.142], [51.511, -0.078]],
+	
+	imageBounds = L.latLngBounds(L.latLng(51.488, -0.142), L.latLng(51.535, -0.078)); //745px / 375px
+	if(imageBounds.isValid()){
+		console.log("Not valid");
+		//imageBounds = L.latLngBounds([51.488, -0.142], [51.521, -0.078]);
+	}else{
+		console.log("Valid");
+	}
+	L.imageOverlay(imageUrl, imageBounds).addTo(map);
+
+</script>
+
+
+
+</body>
+</html>
