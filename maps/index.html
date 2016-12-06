@@ -38,7 +38,7 @@
 <script>
 
 	var map = L.map('map',
-                    {   attributionControl: false,
+                    {   attribution: '',
                         zoomControl: true,
                         center: [51.500, -0.1100],
                         zoom: 14.5,
@@ -62,6 +62,7 @@
 	}
 	L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
+	document.getElementsByClassName("leaflet-control-attribution")[0].innerHTML='<strong>Nudle Maps</strong> (Image from <a href="https://www.reddit.com/r/watch_dogs/comments/5f7jq9/wd2_spoilers_a_complete_wd_2_map_including_all/" target="_blank">/u/hjadr</a> | map <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>)'
 </script>
 
 
